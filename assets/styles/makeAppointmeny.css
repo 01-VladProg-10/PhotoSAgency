@@ -1,0 +1,179 @@
+/* Base styles (you can copy these from your existing CSS file) */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  height: 100%; /* Upewnij się, że html i body mają pełną wysokość */
+}
+
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero section styles */
+#booking-hero {
+  background-image: url("../pictures/1000024464.jpg"); /* Replace with an appropriate image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 3rem 0; /* Added padding to ensure hero section is not too tight */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Booking form styles */
+#booking-form {
+  background-color: #f8f8f8;
+  padding: 2rem 0;
+  width: 100%; /* Ensure the form takes full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  padding: 1rem;
+}
+
+/* Form container with centered content */
+#photo-session-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width inside the container */
+  display: flex;
+  flex-direction: column; /* Ensure all elements are stacked vertically */
+  gap: 1.5rem;
+  justify-content: space-between; /* This ensures the button stays at the bottom */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Ensure the submit button is at the bottom */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Calendar styles */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 350px;
+  margin: 1rem 0;
+}
+
+.calendar-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-day.available {
+  background-color: #e6f7ff;
+}
+
+.calendar-day.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.calendar-day.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive layout adjustments for smaller screens */
+@media (max-width: 768px) {
+  #photo-session-form {
+    flex-direction: column; /* Stacked layout in one column on small screens */
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  button.submit-btn {
+    width: 100%; /* Ensure submit button takes full width */
+  }
+
+  #calendar {
+    max-width: 100%;
+  }
+}
+
+/* Ensure footer is not hidden */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}

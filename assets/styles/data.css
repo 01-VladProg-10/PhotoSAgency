@@ -1,0 +1,268 @@
+/* Resetowanie stylów i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Nagłówek i nawigacja */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+/* Główna zawartość */
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#hero {
+    background-image: url('../pictures/1000024638.jpg');
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+#about {
+    background-image: url('../pictures/1000024640.jpg');
+}
+
+#skills {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
+
+#equipment {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Umiejętności */
+.skills-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--skill-level);
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* Lista sprzętu */
+.equipment-list {
+    list-style: none;
+}
+
+.equipment-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.equipment-list li i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Efekt zanikania i przesuwania tekstu */
+.text-appear {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.text-appear.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.book-session-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-session-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .content-wrapper {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+}
+
