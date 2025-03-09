@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="copyright">
-        &copy; <span class="lang" data-key="copyright_year">2023-2025</span> <span class="lang" data-key="photo_studio">PhotoStudio</span>. <span class="lang" data-key="all_rights_reserved">Wszelkie prawa zastrzeżone.</span>
+        &copy; <span class="lang" data-key="copyright_year">202-2025</span> <span class="lang" data-key="photo_studio">PhotoStudio</span>. <span class="lang" data-key="all_rights_reserved">Wszelkie prawa zastrzeżone.</span>
     </div>
 </footer>
